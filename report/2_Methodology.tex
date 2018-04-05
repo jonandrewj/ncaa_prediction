@@ -3,7 +3,7 @@
 \subsection{Data Collection}
 We collected our data from an online database from Kaggle\footnote{https://www.kaggle.com/c/mens-machine-learning-competition-2018/data}
 This dataset provided season statistics for each NCAA basketball team since 2003.
-We also acquired expert rankings from \todo{Add Correct Rankings and Sources}.
+We also acquired expert rankings from ESPN\footnote{http://www.espn.com/mens-college-basketball/rpi} and Kaggle.
 
 This raw data was not organized in a way that allowed for accurate training models.
 This was primarily due to team stats and records being organized by winning and losing team.
@@ -11,7 +11,14 @@ This caused the learning model to always select the winning team, since the winn
 To rectify this, we had to randomly shuffle the wininng and losing teams into teams labled A and B and they classify the output as either A or B winning.
 
 From this processed data, we used a number of combinations to see what different data sets would allow for prediction.
-\todo{Talk about the different data sets}
+We primarily focused on three groups of data. 
+First, we wanted to focus on exclusively the seeding as a baseline accuracy that we would strive to beat.
+Next, we looked at several of the prominent ranking algorithms such as RPI and KenPom to see how well a community of ranking algorithms could do.
+Then, we looked at a set of season statistics that we organized for each team. 
+Finally, we combined these three datasets together to take advantage of all of our data.
 
 \subsection{Learning Process}
-\todo{Talk about the machine learning algorithms used}
+We wanted to be able to effectively use all of the techniques that we had used in class to train and test our data.
+A nice solution for this was to use the Python library sklearn which provides a nice high level abstraction.
+With this library, we were able to structure our training to include all of the following supervised learning models: logistic regression, decision tree, naive bayes, neural network, random forest, boosted forest, gaussian process, k-nearest neighbor, support vector machine, and several ensembles.
+We were able to structure our code to see results from all of these learners and make educated decisions on which models consistently performed the best and how we could then use ensembles of those models to further improve the results.
