@@ -1,3 +1,27 @@
 \section{Future Work}
 \subsection{Bracket Creation}
+
+
 \subsection{Probabilistic Upsets}
+
+Because we were unsuccessful in improving the model beyond the accuracy achieved using the seeding data we collected, we decided to explore the possibility of predicting the most likely upsets. 
+
+In order to do so, we decided to define upsets as games in which the seeding between both teams differed by 5 or more seeds. 
+The intention of this sub setting was to focus on the features that might best predict upsets. 
+Additionally, upsets are a relatively rare occurrence in these games. 
+In fact, in games where the seed differed by at least five games, upsets occurred with a frequency of roughly 21\%.
+Because the dataset was skewed towards few upsets, the data was undersampled to create a dataset with 50\% upsets and 50\% non-upset games. 
+Again, this was done in hopes of creating a dataset that is more likely to find attributes that are predictive of upset games. 
+
+Using this data, a logistical regression model was fit to predict upsets. 
+The predictive accuracy on a test set from original data yielded an accuracy of roughly 73\%. 
+Although this accuracy is not very high, the logistic regression model allowed for a probabilistic output. 
+In other words, we were able to get a list of the most likely upsets probability wise. 
+
+These probabilities offer the potential of adding some picks for upsets to one’s bracket that our other model would not have chosen. 
+Because bracket prediction is so difficult, it is worthwhile to add some potential upsets to one’s bracket selected by this model. 
+By adding these upsets to one’s bracket, the chances of winning a bracket challenge will increase. 
+
+This also may be the subject of future work, as the real challenge in creating good brackets is to figure out which upsets are most likely. 
+In the future it would certainly be worthwhile to try more models and different techniques of finding the most likely upsets in the tournament.
+
