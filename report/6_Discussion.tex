@@ -1,5 +1,19 @@
 \section{Discussion}
 \subsection{Importance of Seed}
-\todo{Discuss the importance of the seeding data}
+While, we tried a number of different feature sets, including omission of seeding data, we were never able to achieve much higher accuracy than that of the baseline model which predicted the higher seed to win.
+There are two key aspects of seeding data that contribute to its dominance as a feature.
+First, seeds are given based on season results.
+This essentially means that tournament seeds are a well considered summary of all the data we can collect and use for our machine learning model.
+Second, the tournament structure typically forces the lowest seeds to play the highest seeds.
+This further skews the data in favor of the higher seeds winning much more frequently and results in the high baseline accuracy.
+
 \subsection{Importance of Season Statistics}
-\todo{Discuss the importance of the season statistics}
+Despite the dominance of seeding in every model, slight gains are found by including additional features from the teams' season statistics.
+This is because at certain times within the tournament, there is little difference in the seeding values of the two teams and it becomes more likely the the lower seed will win.
+When provided with the additional information from the season statistics, the machine learning models can begin to select the better of the two closely seeded teams.
+
+\subsection{Poor Upset Prediction}
+The two preceding sections discussed why the machine learning models selected the winners that they did.
+However, the majority of the incorrect winner selections came from upsets.
+Since the primary feature used is a team's seed, all of the models had a difficult time predicting when a significantly lower seed would beat a higher seed.
+Removing the seed allowed for more variety, but also yielded lower accuracies overall.
