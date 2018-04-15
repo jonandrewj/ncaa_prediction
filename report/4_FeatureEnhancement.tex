@@ -1,2 +1,46 @@
 \section{Feature Enchancement}
-\todo{Write about adapting the features.}
+
+Having established this baseline accuracy of about 71\% using the seeds, we wanted to improve our accuracy by performing some feature improvements. 
+We started by using statistics gained over each team’s regular season. 
+Then we combined those features with the features from the top ranking systems to try to take advantage of all our data. 
+In both cases we used some a wrapper algorithm for feature selection with each of our prediction algorithms to try to get the best combinations for a feature set.
+
+First, we wanted to use the seasonal statistics to see if we could improve on our baseline accuracy.
+The seasonal statistics included the following features: number of wins, number of losses, averages per game for points, shots made, shots attempted, three-point shots made, three-point shots attempted, rebounds, assists, turnovers, steals, blocks, and personal fouls.
+Here are the results from each year and the average overall results compared to our baseline accuracies by seed using this new feature set. 
+
+\vspace{0.5cm}
+\begin{tabular}{c c c}
+    \toprule
+    Year & Accuracy & Difference\\
+    \midrule
+    2004 & 0.7187 & -0.0313\\
+    2005 & 0.6875 & -0.0312\\
+    2006 & 0.7187 & +0.0312\\
+    2007 & 0.7812 & -0.0313\\
+    2008 & 0.7968 & +0.0312\\
+    2009 & 0.7031 & -0.0469\\
+    2010 & 0.6875 & +0.0000\\
+    2011 & 0.6865 & +0.0000\\
+    2012 & 0.7313 & +0.0000\\
+    2013 & 0.7164 & +0.0150\\
+    2014 & 0.6567 & -0.0149\\
+    2015 & 0.7462 & -0.0448\\
+    2016 & 0.7164 & -0.0149\\
+    2017 & 0.7164 & -0.0447\\
+    All & 0.7289 & +0.0019\\
+    \bottomrule
+\end{tabular}
+\vspace{0.5cm}
+
+We saw that there was little improvement on the baseline accuracy using seasonal statistics. 
+Much like the results that we gained from using the top ranking systems mentioned in our initial results, there were years that had better accuracies, years that had worse accuracies, and years that had no change in accuracies. 
+Overall, on all of the years we saw that there was less than 1\% on the increase of accuracy. 
+This meant that adding these features had very little effect on the outcome of our predictions. 
+
+We continued to tweak the seasonal statistics features by including certain combinations of them instead of adding all of them to the feature set. 
+To do this we used a wrapper algorithm called recursive feature elimination. 
+The goal was to select the optimal number of features by considering each set of features. 
+Each iteration got the same results, about 72\% in the overall accuracy. 
+There was no combination of features which resulted in an accuracy much larger than the initial accuracy gained by simply using only the seed.
+

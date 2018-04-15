@@ -1,2 +1,39 @@
 \section{Final Results}
-\todo{Write about final results}
+
+Our next step was to combine the seasonal statistic features with the top ranking systems features used in our initial results. 
+We thought this would take advantage of all of our data and combine to result in greater accuracies than we have gained so far. 
+Here are the results from each year and the average overall results compared to our baseline accuracies by seed using this new feature set.
+
+
+\vspace{0.5cm}
+\begin{tabular}{c c c}
+    \toprule
+    Year & Accuracy & Difference\\
+    \midrule
+    2004 & 0.8125 & +0.0625\\
+    2005 & 0.7187 & +0.0000\\
+    2006 & 0.7187 & +0.0312\\
+    2007 & 0.7968 & -0.0157\\
+    2008 & 0.7500 & -0.0156\\
+    2009 & 0.7343 & -0.0157\\
+    2010 & 0.7500 & +0.0625\\
+    2011 & 0.6716 & -0.0149\\
+    2012 & 0.6865 & -0.0448\\
+    2013 & 0.6567 & -0.0447\\
+    2014 & 0.6865 & +0.0149\\
+    2015 & 0.7611 & -0.0299\\
+    2016 & 0.7164 & -0.0149\\
+    2017 & 0.7761 & +0.0150\\
+    All & 0.7217 & +0.0047\\
+    \bottomrule
+\end{tabular}
+\vspace{0.5cm}
+
+We again saw little improvement on the baseline accuracy using this new feature set. 
+Even though we used all of the data and many features, the overall accuracy increased less than 1\% compared to the baseline accuracy. 
+
+We again tried using recursive feature elimination to get the best combinations of features for each of our algorithms. 
+Using the entire data set full of each feature, we still saw that the overall accuracy did not increase more than 72\%. 
+
+We were not thrilled about these results and we wanted to do better than 72\%. 
+We tried to think of ways to increase our accuracy and we thought that they only way we could do this was to try to predict upset games in a creative way.
