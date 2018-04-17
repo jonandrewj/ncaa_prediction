@@ -1,9 +1,8 @@
 \section{Feature Enchancement}
-
 Having established this baseline accuracy of about 71\% using the seeds, we wanted to improve our accuracy by performing some feature improvements. 
 We started by using statistics gained over each team’s regular season. 
 Then we combined those features with the features from the top ranking systems to try to take advantage of all our data. 
-In both cases we used some a wrapper algorithm for feature selection with each of our prediction algorithms to try to get the best combinations for a feature set.
+In both cases we used a wrapper algorithm for feature selection with each of our prediction algorithms to try to get the best combinations for a feature set.
 
 First, we wanted to use the seasonal statistics to see if we could improve on our baseline accuracy.
 The seasonal statistics included the following features: number of wins, number of losses, averages per game for points, shots made, shots attempted, three-point shots made, three-point shots attempted, rebounds, assists, turnovers, steals, blocks, and personal fouls.
@@ -35,12 +34,12 @@ Here are the results from each year and the average overall results compared to 
 
 We saw that there was little improvement on the baseline accuracy using seasonal statistics. 
 Much like the results that we gained from using the top ranking systems mentioned in our initial results, there were years that had better accuracies, years that had worse accuracies, and years that had no change in accuracies. 
-Overall, on all of the years we saw that there was less than 1\% on the increase of accuracy. 
+Overall, on all of the years we saw that there was less than 1\% in the differences between these and baseline accuracies. 
 This meant that adding these features had very little effect on the outcome of our predictions. 
 
 We continued to tweak the seasonal statistics features by including certain combinations of them instead of adding all of them to the feature set. 
 To do this we used a wrapper algorithm called recursive feature elimination. 
 The goal was to select the optimal number of features by considering each set of features. 
 Each iteration got the same results, about 72\% in the overall accuracy. 
-There was no combination of features which resulted in an accuracy much larger than the initial accuracy gained by simply using only the seed.
+There was no combination of features which resulted in an accuracy much larger than the initial accuracy gained by using only the seed.
 

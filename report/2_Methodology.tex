@@ -1,14 +1,14 @@
 \section{Methodology}
 
 \subsection{Data Collection}
-We collected our data from an online database from Kaggle\footnote{https://www.kaggle.com/c/mens-machine-learning-competition-2018/data}
+We collected our data from an online database on Kaggle\footnote{https://www.kaggle.com/c/mens-machine-learning-competition-2018/data}
 This dataset provided season statistics for each NCAA basketball team since 2003.
 We also acquired expert rankings from ESPN\footnote{http://www.espn.com/mens-college-basketball/rpi} and Kaggle.
 
 This raw data was not organized in a way that allowed for accurate training models.
 This was primarily due to team stats and records being organized by winning and losing team.
 This caused the learning model to always select the winning team, since the winning teams stats were always input in the same places.
-To rectify this, we had to randomly shuffle the wininng and losing teams into teams labled A and B and they classify the output as either A or B winning.
+To rectify this, we had to randomly shuffle the wininng and losing teams into teams labled A and B and then classify the output as either A or B winning.
 
 From this processed data, we used a number of combinations to see what different data sets would allow for prediction.
 We primarily focused on three groups of data. 

@@ -1,10 +1,8 @@
 \section{Future Work}
-
 Our final week or so of effort was devoted to exploring the probabilities of upsets. 
 These two sections talk about our efforts to calculate the probability of an upset and how that can lead into a future project.
 
 \subsection{Probabilistic Upsets}
-
 Because we were unsuccessful in improving the model beyond the accuracy achieved using the seeding data we collected, we decided to explore the possibility of predicting the most likely upsets. 
 
 In order to do so, we decided to define upsets as games in which the seeding between both teams differed by 5 or more seeds. 
@@ -19,15 +17,14 @@ The predictive accuracy on a test set from original data yielded an accuracy of 
 Although this accuracy is not very high, the logistic regression model allowed for a probabilistic output. 
 In other words, we were able to get a list of the most likely upsets probability wise. 
 
-These probabilities offer the potential of adding some picks for upsets to one’s bracket that our other model would not have chosen. 
-Because bracket prediction is so difficult, it is worthwhile to add some potential upsets to one’s bracket selected by this model. 
-By adding these upsets to one’s bracket, the chances of winning a bracket challenge will increase. 
+These probabilities offer the potential of adding some picks for upsets to one’s bracket that our other models would not have chosen. 
+Because bracket prediction is so difficult, it is worthwhile to add some potential upsets to a bracket selected by this model. 
+By adding these upsets to a bracket, the chances of winning a bracket challenge will increase. 
 
 This also may be the subject of future work, as the real challenge in creating good brackets is to figure out which upsets are most likely. 
 In the future it would certainly be worthwhile to try more models and different techniques of finding the most likely upsets in the tournament.
 
 \subsection{Bracket Creation}
-
 Our next step from these small tests would be to try to create brackets that were randomly generated using our upset predictor and see if we can randomly pick the correct upsets.
 The mean idea is that predicting the most likely victor for all the games, even when 100\% correct, won't produce a bracket that wins in any of the competitions.
-However, we would be interested to see if maybe a set of 100 brackets, each with an intelligent set of upsets, would have 1 that turns out to be a really good bracket.
+However, we would be interested to see if a set of 100 brackets, each with an intelligent set of upsets, would have a few brackets that more accurately predicted the outcomes of the tournament.
